@@ -56,7 +56,7 @@
 
 </head>
 <body ng-app="POS">
-	<div id="maincontent">
+	<div id="maincontent" ng-controller="keypad">
 		
 		
 		<div class="navbar navbar-warning">
@@ -176,7 +176,7 @@
 									<i class="mdi-hardware-phone-android"></i>
 								</div>
 								<div class="row-content">
-									<h4 class="list-group-item-heading">974235922</h4>
+									<h4 class="list-group-item-heading" ng-model="phone">{{phone}}</h4>
 									<p class="list-group-item-text">Mobile</p>
 								</div>
 							</div>
@@ -188,35 +188,35 @@
 
 
 
-						<div class="well well-lg col-md-10" id="bottomwell" ng-controller="keypad">
+						<div class="well well-lg col-md-10" id="bottomwell">
 					            <div class="col-lg-12">
 					                <input type="email" class="form-control" id="inputEmail">
 					            </div>
 							<table class="table table-hover ">
 								<tbody>
 									<tr>
-										<td><a class="btn btn-success btn-raised">1</a></td>
-										<td><a class="btn btn-success btn-raised">2</a></td>
-										<td><a class="btn btn-success btn-raised">3</a></td>
+										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '1'">1</a></td>
+										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '2'">2</a></td>
+										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '3'">3</a></td>
 										<td><a class="btn btn-warning btn-raised">Qty</a></td>
 									</tr>
 									<tr>
-										<td><a class="btn btn-success btn-raised">4</a></td>
-										<td><a class="btn btn-success btn-raised">5</a></td>
-										<td><a class="btn btn-success btn-raised">6</a></td>
+										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '4'">4</a></td>
+										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '5'">5</a></td>
+										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '6'">6</a></td>
 										<td><a class="btn btn-warning btn-raised">Rs</a></td>
 									</tr>
 									<tr>
-										<td><a class="btn btn-success btn-raised">7</a></td>
-										<td><a class="btn btn-success btn-raised">8</a></td>
-										<td><a class="btn btn-success btn-raised">9</a></td>
+										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '7'">7</a></td>
+										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '8'">8</a></td>
+										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '9'">9</a></td>
 										<td><a class="btn btn-warning btn-raised">%</a></td>
 									</tr>
 									<tr>
 										<td><a class="btn btn-success btn-raised">.</a></td>
-										<td><a class="btn btn-success btn-raised">0</a></td>
+										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '0'">0</a></td>
 										<td><a class="btn btn-warning btn-raised">+</a></td>
-										<td><a class="btn btn-warning btn-raised">tree</a></td>
+										<td><a class="btn btn-warning btn-raised" ng-click="phone = ''">tree</a></td>
 									</tr>
 								</tbody>
 								</div>
@@ -236,10 +236,18 @@
 <script type="text/javascript" src="js/material.js"></script>
 <script type="text/javascript" src="js/ripples.js"></script>
 <script data-require="angular.js@1.3.15" data-semver="1.3.15" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.0/angular.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-touch.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-touch.js.map"></script>
+
 <script type="text/javascript">
-var app=angular.module("POS", []);
+var app=angular.module("POS", ['ngTouch']);
 
 app.controller("keypad", function($http, $scope) {
+
+var touch = function() {
+
+}
+
 
 })
 </script>
