@@ -1,256 +1,165 @@
-<html>
-<head>
-	<title>POS</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/material.css">
-	<link rel="stylesheet" type="text/css" href="css/material.css.map">
-	<link rel="stylesheet" type="text/css" href="css/ripples.css.map">
-	<link rel="stylesheet" type="text/css" href="css/ripples.min.css">
-	<link rel="stylesheet" type="text/css" href="css/material-fullpalette.min.css">
-	<link rel="stylesheet" type="text/css" href="fonts/Material-Design-Icons.svg">
-		
-		<style type="text/css">
-		#maincontent {
-			width: 100%;
-			height: 110%;
-			background-color: black;
-		}
-		#billwell {
-			height: 85%;
-			width: 95%;
-			margin-left: 20px;
-			background-image: url("res/bill.jpg");
-		}
-		#rightcol {
-			height: 85%;
-			background-color: lightgrey;
-		}
-		
-		.row {
-			margin-right: 20px; 
-		}
-		#topwell {
-			width : 110%;
-			height: 40%;
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,user-scalable=no">
+        <title>Hello World</title>
+        <style>
+p[value] {
+    font-size: 3em;
+}
 
-		}
-		#cancelbtn { 
-			width : 20%;
-		}
-		#paybtn {
-			width: 78%;
-		}
-		.table {
-			height : 100%;
-			width: 100%;
-		}
-		
-		#bottomwell {
-			width: 110%;
-			height: 60%
-		}
-		
+p {
+    margin: 0px;
+}
 
-		
-		</style>
+.bill {
+    
+}
+        </style>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.1/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.1/slick-theme.css"/>
+    </head>
+    <body>
+<div ontouchstart="override(event)" ontouchmove="override(event)" ontouchend="override(event)" onmouseover="override(event )" onmousemove="override(event)" onmousedown="override(event)" onmouseup="override(event)" onmouseclick="override(event)">
+<div class="bill">
+    <div>
+        <h1 class="display" style="width: 300px; height: 100px;"></h1>
+        <p value="1" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">1</p>
+        <p value="2" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">2</p>
+        <p value="3" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">3</p>
+        <p value="A" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">A</p>
+        <p/>
 
-</head>
-<body ng-app="POS">
-	<div id="maincontent" ng-controller="keypad">
-		
-		
-		<div class="navbar navbar-warning">
-			<div class="navbar-header">
+        <p value="4" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">4</p>
+        <p value="5" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">5</p>
+        <p value="6" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">6</p>
+        <p value="B" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">B</p>
+        <p/>
 
-				<a class="navbar-brand" href="#">Paisool Billing</a>
-			</div>
-			<div class="navbar-collapse collapse navbar-warning-collapse">
+        <p value="7" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">7</p>
+        <p value="8" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">8</p>
+        <p value="9" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">9</p>
+        <p value="C" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">C</p>
+        <p/>
 
-				<form class="navbar-form navbar-left">
-					<input type="text" class="form-control col-lg-8" placeholder="Search">
-				</form>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Inventory</a></li>
-					<li><a href="#">Analytics</a></li>
-				</ul>
-			</div>
-		</div>
+        <p value="." style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">.</p>
+        <p value="0" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">0</p>
+        <p value="E" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">E</p>
+        <p value="D" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">D</p>
+    </div>
+    <div>
+        <h1 class="display" style="width: 300px; height: 100px;"></h1>
+        <p value="1" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">1</p>
+        <p value="2" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">2</p>
+        <p value="3" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">3</p>
+        <p value="A" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">A</p>
+        <p/>
 
+        <p value="4" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">4</p>
+        <p value="5" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">5</p>
+        <p value="6" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">6</p>
+        <p value="B" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">B</p>
+        <p/>
 
+        <p value="7" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">7</p>
+        <p value="8" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">8</p>
+        <p value="9" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">9</p>
+        <p value="C" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">C</p>
+        <p/>
 
+        <p value="." style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">.</p>
+        <p value="0" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">0</p>
+        <p value="E" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">E</p>
+        <p value="D" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">D</p>
+    </div>
+    <div>
+        <h1 class="display" style="width: 300px; height: 100px;"></h1>
+        <p value="1" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">1</p>
+        <p value="2" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">2</p>
+        <p value="3" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">3</p>
+        <p value="A" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">A</p>
+        <p/>
 
-	<div class="row">
-			
+        <p value="4" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">4</p>
+        <p value="5" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">5</p>
+        <p value="6" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">6</p>
+        <p value="B" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">B</p>
+        <p/>
 
-			<div class="col-md-8" id="bill">
-				<div class="well well-lg" id="billwell">
-					
+        <p value="7" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">7</p>
+        <p value="8" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">8</p>
+        <p value="9" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">9</p>
+        <p value="C" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">C</p>
+        <p/>
 
-					<div class="list-group">
-						<div class="list-group-item">
-							<div class="row-action-primary">
-								<i class="mdi-content-remove-circle-outline"></i>
-							</div>
-							<div class="row-content">
-								<div class="least-content">Rs.70</div>
-								<h4 class="list-group-item-heading">Pepsi 500ml</h4>
-								<p class="list-group-item-text">Rs.35</p>
-							</div>
-						</div>
-						<div class="list-group-separator"></div>
-						<div class="list-group-item">
-							<div class="row-action-primary">
-								<i class="mdi-content-remove-circle-outline"></i>
-							</div>
-							<div class="row-content">
-								<div class="least-content">Rs.560</div>
-								<h4 class="list-group-item-heading">Pilsbury Atta</h4>
-								<p class="list-group-item-text">Rs.560</p>
-							</div>
-						</div>
-						<div class="list-group-separator"></div>
-						<div class="list-group-item">
-							<div class="row-action-primary">
-								<i class="mdi-content-remove-circle-outline"></i>
-							</div>
-							<div class="row-content">
-								<div class="least-content">Rs.240</div>
-								<h4 class="list-group-item-heading">Maggi Family Pack</h4>
-								<p class="list-group-item-text">Rs.80</p>
-							</div>
-						</div>
-						<div class="list-group-separator"></div>
-						<div class="list-group-item">
-							<div class="row-action-primary">
-								<i class="mdi-content-remove-circle-outline"></i>
-							</div>
-							<div class="row-content">
-								<div class="least-content">Rs.60</div>
-								<h4 class="list-group-item-heading">Pepsodent</h4>
-								<p class="list-group-item-text">Rs.30</p>
-							</div>
-						</div>
-						<div class="list-group-separator"></div>
-						<div class="list-group-item">
-							<div class="row-action-primary">
-								<i class="mdi-content-remove-circle-outline"></i>
-							</div>
-							<div class="row-content">
-								<div class="least-content">Rs.75</div>
-								<h4 class="list-group-item-heading">Kinley Mineral Water</h4>
-								<p class="list-group-item-text">Rs.75</p>
-							</div>
-						</div>
-						<div class="list-group-separator"></div>
-					</div>
-				
-					<div id="billbuttons">
-						<a href="" class="btn btn-danger btn-lg" id="cancelbtn">Cancel</a>
-						<a href="" class="btn btn-success btn-lg" id="paybtn">Pay : Rs 1,005</a>
-					</div>
-				</div>
+        <p value="." style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">.</p>
+        <p value="0" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">0</p>
+        <p value="E" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">E</p>
+        <p value="D" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">D</p>
+    </div>
+    <div>
+        <h1 class="display" style="width: 300px; height: 100px;"></h1>
+        <p value="1" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">1</p>
+        <p value="2" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">2</p>
+        <p value="3" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">3</p>
+        <p value="A" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">A</p>
+        <p/>
 
-			</div>
+        <p value="4" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">4</p>
+        <p value="5" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">5</p>
+        <p value="6" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">6</p>
+        <p value="B" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">B</p>
+        <p/>
+
+        <p value="7" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">7</p>
+        <p value="8" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">8</p>
+        <p value="9" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">9</p>
+        <p value="C" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">C</p>
+        <p/>
+
+        <p value="." style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">.</p>
+        <p value="0" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">0</p>
+        <p value="E" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">E</p>
+        <p value="D" style="display: inline-block; background-color: blue; width: 100px; height: 100px;" ontouchstart="t_start(this, event)" ontouchend="t_end(this, event)">D</p>
+    </div>
+</div>
+</div>
 
 
-			
+    </body>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.1/slick.min.js"></script>
+    <script>
+function t_start(element, event) 
+{
+    element.style.backgroundColor = "yellow";
+    event.preventDefault();
+    window.setTimeout(function() { 
+            var display = element.parentElement.getElementsByClass('display')[0];
+            display.innerHTML += element.getAttribute('value');
+    }, 0);
+}
+function t_end(e)
+{
+   e.style.backgroundColor = "blue";
+}
 
-			<div class="col-md-4 well well-lg" id="rightcol">
-				
-				<div class="row" id="right-col-row">
-						
-						<div class="well well-lg col-md-10 list-group" id="topwell">
-							<div class="list-group-item">
-								<div class="row-action-primary">
-									<i class="mdi-social-person"></i>
-								</div>
-								<div class="row-content">
-									<h4 class="list-group-item-heading">Scooby</h4>
-									<p class="list-group-item-text">Raj Subramaniam</p>
-									<a href="#" class="btn btn-primary btn-xs">Dues</a>
-								</div>
-							</div>
-							<div class="list-group-separator"></div>
-							<div class="list-group-item">
-								<div class="row-action-primary">
-									<i class="mdi-hardware-phone-android"></i>
-								</div>
-								<div class="row-content">
-									<h4 class="list-group-item-heading" ng-model="phone">{{phone}}</h4>
-									<p class="list-group-item-text">Mobile</p>
-								</div>
-							</div>
-						</div>
-					
-						
-
-
-
-
-
-						<div class="well well-lg col-md-10" id="bottomwell">
-					            <div class="col-lg-12">
-					                <input type="email" class="form-control" id="inputEmail">
-					            </div>
-							<table class="table table-hover ">
-								<tbody>
-									<tr>
-										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '1'">1</a></td>
-										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '2'">2</a></td>
-										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '3'">3</a></td>
-										<td><a class="btn btn-warning btn-raised">Qty</a></td>
-									</tr>
-									<tr>
-										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '4'">4</a></td>
-										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '5'">5</a></td>
-										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '6'">6</a></td>
-										<td><a class="btn btn-warning btn-raised">Rs</a></td>
-									</tr>
-									<tr>
-										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '7'">7</a></td>
-										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '8'">8</a></td>
-										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '9'">9</a></td>
-										<td><a class="btn btn-warning btn-raised">%</a></td>
-									</tr>
-									<tr>
-										<td><a class="btn btn-success btn-raised">.</a></td>
-										<td><a class="btn btn-success btn-raised" ng-click="phone = phone + '0'">0</a></td>
-										<td><a class="btn btn-warning btn-raised">+</a></td>
-										<td><a class="btn btn-warning btn-raised" ng-click="phone = ''">tree</a></td>
-									</tr>
-								</tbody>
-								</div>
-							</div>
-						</div>
-					</div>
-		
-		
-
-		</div>
-
-
-
-		
-
-	</div>
-<script type="text/javascript" src="js/material.js"></script>
-<script type="text/javascript" src="js/ripples.js"></script>
-<script data-require="angular.js@1.3.15" data-semver="1.3.15" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.0/angular.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-touch.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-touch.js.map"></script>
-
-<script type="text/javascript">
-var app=angular.module("POS", ['ngTouch']);
-
-app.controller("keypad", function($http, $scope) {
-
-var touch = function() {
-
+function override(event) {
+    event.preventDefault();
 }
 
 
-})
-</script>
-
-</body>
+$(document).ready(function(){
+        $('.bill').slick({
+            dots: true,
+            infinite: true,            
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            centerMode: true
+        });
+});
+                
+    </script>
 </html>
